@@ -1,0 +1,30 @@
+<h1 class="form__title">Course</h1>
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form__group">
+    <label class="form__label" for="name">Name</label>
+    <input class="form__input" type="text" id="name" formControlName="name" />
+  </div>
+  <div class="form__group">
+    <label class="form__label" for="description">Description</label>
+    <textarea class="form__input" id="description" formControlName="description"></textarea>
+  </div>
+  <div class="form__group">
+    <label class="form__label" for="date">Date</label>
+    <input class="form__input" type="date" id="date" formControlName="date" />
+  </div>
+  <div class="form__group">
+    <label class="form__label" for="length">Length</label>
+    <input class="form__input" type="number" id="length" formControlName="length" />
+  </div>
+  <div class="form__group">
+    <label class="form__label" for="authors">Authors</label>
+    <input class="form__input" type="text" id="authors" formControlName="authors" />
+  </div>
+  <div class="form__group" style="flex-direction: row; align-items: center; gap: 10px">
+    <label class="form__label" for="isTopRated">Is Top Rated</label>
+    <input class="form__input" style="margin-bottom: 0;" type="checkbox" id="isTopRated" formControlName="isTopRated" />
+  </div>
+  <div class="form__group">
+    <button class="form__button" type="submit">Submit</button>
+  </div>
+</form>
