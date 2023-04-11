@@ -9,4 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   templateUrl: '../course-base-form/course-base-form.component.html',
   styleUrls: ['../course-base-form/course-base-form.component.scss']
 })
-export class CourseCreatePageComponent extends CourseBaseFormComponent {}
+export class CourseCreatePageComponent extends CourseBaseFormComponent {
+  override onSubmit() {
+    super.onSubmit();
+    console.log(this.form.value);
+    // api call to create course
+  }
+}

@@ -14,10 +14,10 @@ export class CourseBaseFormComponent {
   form = this.fb.group({
     name: [''],
     description: [''],
-    date: [''],
-    length: [''],
+    date: [new Date()],
+    length: [0],
     authors: [''],
-    isTopRated: ['']
+    isTopRated: [false]
   });
 
   onSubmit() {
